@@ -1,3 +1,20 @@
+body {
+    background: url("images/barbershop_bg.jpeg") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+}
+
+body::before {
+    background-color: rgba(0,0,0,0.5);
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 .navbar {
     background-color: white;
     height: 80px;
@@ -59,22 +76,6 @@
     }
 }
 
-.hero-section {
-    background: url("images/barbershop_bg.jpeg") no-repeat center;
-    background-size: cover;
-    width: 100%;
-}
-
-.hero-section::before {
-    background-color: rgba(0,0,0,0.5);
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
 .hero-section .container {
     height: 100vh;
     z-index: 1;
@@ -84,4 +85,31 @@
 .lead {
     font-weight: 500;
     font-size: 1.5rem;
+}
+
+.barber-section .container {
+    z-index: 1;
+    position: relative;
+}
+
+.description-section {
+    padding-top: 150px;
+}
+.site-footer {
+    background-color: #111;
+    color: #f1f1f1;
+    z-index: 1;
+    position: relative;
+}
+.site-footer a {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.col-5 img {
+    object-position: center top;
+    object-fit: cover;
 }
