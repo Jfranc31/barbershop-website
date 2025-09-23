@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber Shop</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand me-auto" href="index.html">
+                <img src="images/barber_logo.jpg" alt="Barber Logo" />
+            </a>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">923 Barber Shop</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="barbers.html">Barbers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 active" href="#">Hair Styles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- HairStlyes Section -->
+    <main class="hairstyle-section">
+        <!-- Page Header -->
+        <section class="container d-flex align-items-center justify-content-center fs-1 text-white flex-column">
+            <section class="description-section">
+                <section class="text-center mt-5">
+                    <div class="container">
+                        <h1 class="display-1 fw-bold">Hair Styles</h1>
+                        <p class="lead">Explore Our Latest Hair Styles</p>
+                    </div>
+                </section>
+            </section>
+        </section>
+        <!-- End Page Header -->
+
+        <main class="container my-5">
+            <div class="row g-4">
+                <!-- Hairstyle Card Example -->
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                            <img 
+                                src="images/hair_styles/hairstyle_quiff.jpeg" 
+                                class="card-img-top"
+                                alt="Quiff Hairstyle"
+                            >
+                        <div class="card-body">
+                            <h5 class="card-title">Quiff</h5>
+                            <p class="card-text">Volume up front, hair brushed back or up; clean sides.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img 
+                            src="images/hair_styles/hairstyle_french_crop.jpeg" 
+                            class="card-img-top" 
+                            alt="French Crop Hairstyle"
+                        >
+                        <div class="card-body">
+                            <h5 class="card-title">French Crop</h5>
+                            <p class="card-text">Short sides/back + textured top; often with a fringe. Low maintenance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img 
+                            src="images/hair_styles/hairstyle_slick_back_undercut.jpeg" 
+                            class="card-img-top" 
+                            alt="Slick Back Undercut Hairstyle" 
+                        >
+                        <div class="card-body">
+                            <h5 class="card-title">Slick Back Undercut</h5>
+                            <p class="card-text">Longer top hair slicked back with shorter/undercut sides. Sharp contrast.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img 
+                            src="images/hair_styles/hairstyle_taper_fade.jpeg" 
+                            class="card-img-top" 
+                            alt="Taper Fade Hairstyle"
+                        >
+                        <div class="card-body">
+                            <h5 class="card-title">Taper Fade</h5>
+                            <p class="card-text">Sides/back gradually shorten; nice blend.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img 
+                            src="images/hair_styles/hairstyle_crew_cut.jpeg" 
+                            class="card-img-top" 
+                            alt="Crew Cut Hairstyle"
+                        >
+                        <div class="card-body">
+                            <h5 class="card-title">Crew Cut</h5>
+                            <p class="card-text">Short top, even shorter sides; top often styled upright a little.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img 
+                            src="images/hair_styles/hairstyle_buzz_cut.jpeg" 
+                            class="card-img-top" 
+                            alt="Buzz Cut Hairstyle"
+                        >
+                        <div class="card-body">
+                            <h5 class="card-title">Buzz Cut</h5>
+                            <p class="card-text">All over very short; minimal styling.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img 
+                            src="images/hair_styles/hairstyle_side_part.jpeg" 
+                            class="card-img-top" 
+                            alt="Side Part Hairstyle"
+                        >
+                        <div class="card-body">
+                            <h5 class="card-title">Side Part</h5>
+                            <p class="card-text">Distinct part, hair combed/brush to the side. Elegant & timeless.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img 
+                            src="images/hair_styles/hairstyle_pompadour.jpeg" 
+                            class="card-img-top" 
+                            alt="Pompadour Hairstyle"
+                        >
+                        <div class="card-body">
+                            <h5 class="card-title">Pompadour</h5>
+                            <p class="card-text">Big volume on top; maybe look dramatic.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img 
+                            src="images/hair_styles/hairstyle_faux_hawk.jpeg" 
+                            class="card-img-top" 
+                            alt="Faux Hawk Hairstyle"
+                        >
+                        <div class="card-body">
+                            <h5 class="card-title">Faux Hawk</h5>
+                            <p class="card-text">Similar to mohawk but sides aren't shaved totally; top is styled up.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Hairstyle Card Example -->
+            </div>
+        </main>
+    </main>
+    <!-- End HairStlyes Section -->
+
+    <!-- Footer -->
+    <footer class="site-footer bg-dark text-light mt-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>923 Barber Shop</h5>
+                    <p class="mb-0">123 Main St.<br/>Your City, ST 12345</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Hours</h5>
+                    <p class="mb-0">Mon-Fri: 9am - 7pm<br/>Sat: 9am - 5pm<br/>Sun: Closed</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Contact</h5>
+                    <p class="mb-0">Phone: (555) 123-4567<br/>Email: info@923barbershop.com</p>
+                    <div class="mt-2">
+                        <a href="#" class="text-light me-2">Facebook</a>
+                        <a href="#" class="text-light">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3 small">&copy; 2025 923 Barber Shop. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
