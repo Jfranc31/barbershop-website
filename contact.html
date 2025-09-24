@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber Shop</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand me-auto" href="#">
+                <img src="images/barber_logo.jpg" alt="Barber Logo" />
+            </a>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">923 Barber Shop</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="barbers.html">Barbers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="hairstyles.html">Hair Styles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 active" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Contact Section -->
+    <main class="contact-section">
+        <section class="container d-flex align-items-center justify-content-center fs-1 text-white flex-column">
+            <section class="description-section">
+                <section class="text-center mt-5">
+                    <h1 class="display-1 fw-bold text-center">Inquire About Appointment</h1>
+                </section>
+            </section>
+        </section>
+        <div class="container">
+            <form action="http://localhost:3000/processform" method="POST" class="mt-4">
+                <!-- Choose Barber -->
+                <div class="mb-3">
+                    <label for="barber" class="form-label">Choose Barber</label>
+                    <select id="barber" name="barber" class="form-select">
+                        <option selected disabled>-- Select Barber --</option>
+                        <option value="john_doe">John Doe</option>
+                        <option value="mike_johnson">Mike Johnson</option>
+                        <option value="david_lee">David Lee</option>
+                        <option value="anthony_rivera">Anthony "Tony" Rivera</option>
+                        <option value="carlos_martinez">Carlos Martinez</option>
+                        <option value="marcus_green">Marcus Green</option>
+                        <option value="jordan_king">Jordan King</option>
+                        <option value="damiel_oconner">Damiel O'Conner</option>
+                        <option value="elijah_brown">Elijah Brown</option>
+                        <option value="roberto_alvarez">Roberto "Berto" Alvarez</option>
+                        <option value="andre_walker">Andre Walker</option>
+                        <option value="marcus_white">Marcus White</option>
+                    </select>
+                </div>
+
+                <!-- Choose Hairstyle -->
+                <div class="mb-3">
+                    <label for="hairstyle" class="form-label">Choose Hairstyle</label>
+                    <select id="hairstyle" name="hairstyle" class="form-select">
+                        <option selected disabled>-- Select a Hairstyle --</option>
+                        <option value="quiff">Quiff</option>
+                        <option value="french_crop">French Crop</option>
+                        <option value="slick_back_undercut">Slick Back Undercut</option>
+                        <option value="taper_fade">Taper Fade</option>
+                        <option value="crew_cut">Crew Cut</option>
+                        <option value="buzzcut">Buzz Cut</option>
+                        <option value="side_part">Side Part</option>
+                        <option value="pompadour">Pompadour</option>
+                        <option value="faux_hawk">Faux Hawk</option>
+                    </select>
+                </div>
+
+                <!-- First Name -->
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                </div>
+
+                <!-- Last Name -->
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="e.g. 555-123-4567" pattern="[0-9\s\-\(\)]+" required>
+                </div>
+
+                <!-- Extra Notes -->
+                <div class="mb-3">
+                    <label for="notes" class="form-label">Notes / Special Requests</label>
+                    <textarea class="form-control" id="notes" name="notes" rows="3" placeholder="Any special instructions..."></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+                
+            </form>
+        </div>
+    </main>
+
+    <!-- End Contact Section -->
+    
+    <!-- Footer -->
+    <footer class="site-footer bg-dark text-light mt-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>923 Barber Shop</h5>
+                    <p class="mb-0">123 Main St.<br/>Your City, ST 12345</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Hours</h5>
+                    <p class="mb-0">Mon-Fri: 9am - 7pm<br/>Sat: 9am - 5pm<br/>Sun: Closed</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Contact</h5>
+                    <p class="mb-0">Phone: (555) 123-4567<br/>Email: info@923barbershop.com</p>
+                    <div class="mt-2">
+                        <a href="#" class="text-light me-2">Facebook</a>
+                        <a href="#" class="text-light">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3 small">&copy; 2025 923 Barber Shop. All rights reserved.</div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
