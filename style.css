@@ -1,8 +1,25 @@
+/* ==================== 
+        BASE STYLE 
+   ==================== */
 body {
     background: url("images/barbershop_bg.jpeg") no-repeat center;
     background-size: cover;
     width: 100%;
     position: relative;
+}
+
+@media (max-width: 576px) {
+    body {
+        background-position: center top;
+        background-size: auto 100vh;
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        background-position: center top;
+        background-size: auto 120vh;
+    }
 }
 
 body::before {
@@ -15,32 +32,77 @@ body::before {
     right: 0;
 }
 
+/* ==================== 
+    NAVIGATION SECTION 
+   ==================== */
 .navbar {
     background-color: white;
     height: 80px;
     margin: 20px;
     border-radius: 16px;
     padding: 0.5rem;
+    border: #009970 5px solid;
 }
 
-.navbar-brand {
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo img {
+    width: auto;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.logo p {
     font-weight: 500;
-    color:#009970;
+    color: #009970;
     font-size: 24px;
+    margin: 0;
+    white-space: nowrap;
     transition: 0.3s ease-in-out;
 }
 
-.navbar-brand img {
-    width: auto;
-    height: 60px;
+@media (max-width: 991px) {
+    .logo {
+        gap: 0.5rem;
+    }
+    
+    .logo img {
+        height: 40px;
+    }
+    
+    .logo p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        flex-direction: column;
+        gap: 0.1rem;
+        text-align: center;
+    }
+    
+    .logo img {
+        height: 35px;
+    }
+    
+    .logo p {
+        font-size: 14px;
+        line-height: 1.1;
+    }
 }
 
 .navbar-toggler {
     border: none;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
-.navbar-toggler:focus, .btn-close:focus {
+.navbar-toggler:focus, 
+.btn-close:focus {
     box-shadow: none;
     outline: none;
 }
@@ -52,7 +114,8 @@ body::before {
     position: relative;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover, 
+.nav-link.active {
     color: #009970;
 }
 
@@ -70,28 +133,28 @@ body::before {
         transition: 0.3s ease-in-out;
     }
 
-    .nav-link:hover::before, .nav-link.active::before {
+    .nav-link:hover::before, 
+    .nav-link.active::before {
         width: 100%;
         visibility: visible;
     }
 }
 
+/* ==================== 
+       LAYOUT SECTION 
+   ==================== */
 .hero-section .container {
     height: 100vh;
     z-index: 1;
     position: relative;
 }
 
-.barber-section .container {
-    z-index: 1;
-    position: relative;
+.description-section {
+    padding-top: 150px;
 }
 
-.hairstyle-section .container {
-    z-index: 1;
-    position: relative;
-}
-
+.barber-section .container,
+.hairstyle-section .container,
 .contact-section .container {
     z-index: 1;
     position: relative;
@@ -103,97 +166,15 @@ body::before {
     min-height: calc(100vh - 200px);;
 }
 
-form {
-    background-color: white;
-    max-width: 600px; 
-    margin: auto;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-form .btn {
-    font-size: 1.5rem;
-    font-weight: 600;
-    width: calc(30vh - 10px);
-    margin-bottom: calc(5vh - 20px);
-}
-
 .contact-section div.container {
     border-radius: 16px;
     margin-top: 2rem;
     position: relative;
 }
 
-.contact-section .form-select {
-    font-weight: 500;
-    color: #555;
-}
-
-.contact-section .form-select, 
-.contact-section input, 
-.contact-section textarea {
-    box-shadow: 0 0 0 0.2rem rgba(0,0,0,0.2)
-}
-
-.contact-section .form-select:focus, 
-.contact-section input:focus, 
-.contact-section textarea:focus {
-    border-color: #009970;
-    box-shadow: 0 0 0 0.2rem #55d3b1;
-}
-
-.form-select {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3ccircle cx='8' cy='8' r='7.5' fill='none' stroke='%23009970' stroke-width='1'/%3e%3cpath fill='%23009970' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2z'/%3e%3c/svg%3e");
-    background-size: 1.5rem;
-}
-
-.contact-section label {
-    font-weight: 600;
-    color: black;
-}
-
-.contact-section .mb-3 {
-    padding: 10px;
-}
-
-.lead {
-    font-weight: 500;
-    font-size: 1.5rem;
-}
-
-.description-section {
-    padding-top: 150px;
-}
-
-.description-section h1, .hero-section h1 {
-    color:#009970;
-    text-shadow: #555 5px 5px 5px;
-}
-
-.site-footer {
-    background-color: #111;
-    color: #f1f1f1;
-    z-index: 1;
-    position: relative;
-}
-
-.site-footer h5 {
-    color:#009970;
-    font-weight: 600;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.site-footer a {
-    color: #f1f1f1;
-    text-decoration: none;
-}
-
-.site-footer a:hover {
-    text-decoration: underline 2px #009970; 
-}
-
+/* ==================== 
+       CARD SECTION 
+   ==================== */ 
 .card .col-5 img {
         width: 100%;
         height: 180px; /* consistent image height for all cards */
@@ -226,4 +207,101 @@ form .btn {
     color: #555;
     line-height: 1.6;
     font-size: 0.95rem;
+}
+
+@media (min-width: 1400px) {
+    .card-text {
+        font-size: 20px;
+    }
+}
+
+/* ==================== 
+       FORM SECTION 
+   ==================== */
+form {
+    background-color: white;
+    max-width: 600px; 
+    margin: auto;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+form .btn {
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: calc(30vh - 10px);
+    margin-bottom: calc(5vh - 20px);
+}
+
+.contact-section .form-select {
+    font-weight: 500;
+    color: #555;
+}
+
+.contact-section .form-select, 
+.contact-section input, 
+.contact-section textarea {
+    font-size: 1rem;
+    box-shadow: 0 0 0 0.2rem rgba(0,0,0,0.2)
+}
+
+.contact-section .form-select:focus, 
+.contact-section input:focus, 
+.contact-section textarea:focus {
+    border-color: #009970;
+    box-shadow: 0 0 0 0.2rem #55d3b1;
+}
+
+.form-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3ccircle cx='8' cy='8' r='7.5' fill='none' stroke='%23009970' stroke-width='1'/%3e%3cpath fill='%23009970' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2z'/%3e%3c/svg%3e");
+    background-size: 1.5rem;
+}
+
+.contact-section label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+}
+
+.contact-section .mb-3 {
+    padding: 10px;
+}
+
+/* ==================== 
+      FOOTER SECTION 
+   ==================== */
+.site-footer {
+    background-color: #111;
+    color: #f1f1f1;
+    z-index: 1;
+    position: relative;
+}
+
+.site-footer h5 {
+    color:#009970;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.site-footer a {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline 2px #009970; 
+}
+
+
+.lead {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.description-section h1, 
+.hero-section h1 {
+    color:#009970;
+    text-shadow: #555 5px 5px 5px;
 }

@@ -1,0 +1,34 @@
+<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle for contrast -->
+  <circle cx="40" cy="40" r="35" fill="#009970" opacity="0.1"/>
+  
+  <!-- Barber pole stripes -->
+  <rect x="30" y="15" width="20" height="50" rx="10" ry="10" fill="#009970"/>
+  <rect x="30" y="15" width="20" height="50" rx="10" ry="10" fill="url(#stripes)"/>
+  
+  <!-- Pole caps -->
+  <ellipse cx="40" cy="15" rx="12" ry="4" fill="#333"/>
+  <ellipse cx="40" cy="65" rx="12" ry="4" fill="#333"/>
+  
+  <!-- Scissors -->
+  <g transform="translate(52, 25)">
+    <!-- Left blade -->
+    <path d="M5 5 L15 15 L12 18 L2 8 Z" fill="#333"/>
+    <circle cx="3" cy="6" r="3" fill="none" stroke="#333" stroke-width="1.5"/>
+    
+    <!-- Right blade -->
+    <path d="M5 25 L15 15 L12 12 L2 22 Z" fill="#333"/>
+    <circle cx="3" cy="24" r="3" fill="none" stroke="#333" stroke-width="1.5"/>
+    
+    <!-- Pivot -->
+    <circle cx="15" cy="15" r="2" fill="#009970"/>
+  </g>
+  
+  <!-- Pattern definition -->
+  <defs>
+    <pattern id="stripes" patternUnits="userSpaceOnUse" width="20" height="8" patternTransform="rotate(45)">
+      <rect width="20" height="4" fill="#009970"/>
+      <rect y="4" width="20" height="4" fill="white"/>
+    </pattern>
+  </defs>
+</svg>
